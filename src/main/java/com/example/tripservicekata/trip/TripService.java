@@ -10,9 +10,15 @@ import java.util.List;
 public class TripService {
 
 	private UserSession userSession;
+	private Trips trips;
 
 	public TripService(UserSession userSession) {
 		this.userSession = userSession;
+	}
+	
+	public TripService(UserSession userSession, Trips trips) {
+		this.userSession = userSession;
+		this.trips = trips;
 	}
 
 	public List<Trip> getTripsByUser(User user) throws UserNotLoggedInException {
